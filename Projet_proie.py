@@ -16,15 +16,13 @@ Apre = 10
 Epre = 10
 Erepro = 15
 
-MIAM = 5
-
 chrono = 750
 
 #Dictionnaire couleurs
 colors = {0:"white", 1:"green", 2:"red"}
 
 #Tuples proies et prédateurs
-proie = (1, Apro, None, None)
+proie = (1, Apro, 0, 0)
 predateur = (2, Apre, Epre, Erepro)
 
 
@@ -122,7 +120,7 @@ def age():
             elif liste[i][j][0] == 3:
                 continue
             liste[i][j] = (liste[i][j][0], liste[i][j][1]-1, liste[i][j][2], liste[i][j][3]) #On retire -1 au second élement du tuple proie ou prédateurs qui correspond a l'age
-            if liste[i][j][0] != 0 and liste[i][j][1] <= 0 :#On reposition_initialise les coordonées a (0,0) si la proie ou le prédateur a un age négatif
+            if liste[i][j][0] != 0 and liste[i][j][1] <= 0 :#On initialise les coordonées a (0,0) si la proie ou le prédateur a un age négatif
                 liste[i][j] = (0, 0)
     return liste
 
@@ -139,7 +137,10 @@ def tours():
     global chrono
     chrono = canvas.after(chrono, boutton())#Permets de passer les tours automatiquement
 
-def reinit():#Permets de reinitialiser la grille et les proies/prédateurs
+def re
+
+
+():#Permets de reinitialiser la grille et les proies/prédateurs
     listes()
     grille = []
     for i in range(N) :
@@ -152,14 +153,14 @@ window = tk.Tk()
 window.title("Simulation proie prédateurs")
 canvas = tk.Canvas(window, height=HEIGHT, width=WIDTH)
 begin = tk.Button(window, text="Commencer", command=boutton)
-reposition_initt = tk.Button(window, text="Réinitialisation", command=reinit)
+initialisation = tk.Button(window, text="Réinitialisation", command=reinit)
 
 
 
 #Placement des widgets
 canvas.grid(row = 1, column = 1)
 begin.grid(row = 0, column = 0)
-reposition_initt.grid(row = 0, column = 3)
+initialisation.grid(row = 0, column = 3)
 
 #Création de la grille position_initiale
 grille = []
