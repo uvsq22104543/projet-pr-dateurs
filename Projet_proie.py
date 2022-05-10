@@ -137,10 +137,7 @@ def tours():
     global chrono
     chrono = canvas.after(chrono, boutton())#Permets de passer les tours automatiquement
 
-def re
-
-
-():#Permets de reinitialiser la grille et les proies/prédateurs
+def reinit():():#Permets de reinitialiser la grille et les proies/prédateurs
     listes()
     grille = []
     for i in range(N) :
