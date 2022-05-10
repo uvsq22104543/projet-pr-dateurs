@@ -83,7 +83,7 @@ def cases(liste, x1, y1, x2, y2, position_init):#Fonction qui permet de ne pas f
         if position_init != None and line == i and  column == cpt :
             boucle = False
         if position_init != None and liste[i][cpt][0] == 2 and liste[line][column][0] == 1 :
-            liste[line][column] = (liste[i][cpt][0], liste[i][cpt][1], liste[i][cpt][2]+MIAM, liste[i][cpt][3])
+            liste[line][column] = (liste[i][cpt][0], liste[i][cpt][1], liste[i][cpt][2], liste[i][cpt][3])
             liste[i][cpt] = (0, 0)
             test = False
     return line, column, liste, test
